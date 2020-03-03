@@ -1,0 +1,252 @@
+@include media-lg {
+  .booking {
+    .container {
+      padding: 0 23px;
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@include media-md {
+  header {
+    .container {
+      position: relative;
+      .menu-btn {
+        display: block;
+        z-index: 3;
+        width: 29px;
+        height: 3px;
+        background-color: red;
+        position: relative;
+        transition: ease-in-out 0.3s;
+        &.open {
+          background: none;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 29px;
+          height: 3px;
+          background-color: red;
+          top: -7px;
+          transition: ease-in-out 0.3s;
+        }
+
+        &.open::before {
+          transform: rotate(45deg) translate(0px, 10px);
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          width: 16px;
+          height: 3px;
+          background-color: red;
+          bottom: -7px;
+          transition: ease-in-out 0.3s;
+        }
+
+        &.open::after {
+          transform: rotate(-45deg) translate(0px, -10px);
+          width: 29px;
+        }
+      }
+
+      nav {
+        position: absolute;
+        height: 100vh;
+        width: 0;
+        top: 0;
+        right: -50px;
+        background-color: #12234c;
+        z-index: 2;
+        transition: ease-in-out 0.5s;
+        overflow: hidden;
+        border-radius: 10px 0 0 10px;
+        &.open {
+          width: 300px;
+        }
+        ul {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          li {
+            margin: 39px;
+            a {
+              font-family: "Barlow-Bold2";
+              font-size: 19px;
+              &.blue:hover {
+                transition: all 0.5s ease-in-out;
+                color: whitesmoke;
+              }
+            }
+
+            li {
+              font-family: "Barlow-Mid";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hero {
+    .hero-header {
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+
+  .main-home {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .location-map {
+        width: 100%;
+      }
+      .contact-lists {
+        width: 100%;
+        margin-top: 23px;
+      }
+    }
+  }
+
+  .booking {
+    .container {
+      padding: 0 23px;
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+
+      li {
+        width: 100px;
+        &.underline::before {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 100%;
+          bottom: 10px;
+          left: 5px;
+          background-color: #ff3f3f;
+        }
+        &.underline::before {
+          position: absolute;
+          content: "";
+          height: 2px;
+          width: 90%;
+          bottom: 10px;
+          left: 5px;
+          background-color: #ff3f3f;
+        }
+      }
+    }
+  }
+
+  .step2 {
+    .container {
+      padding: 0;
+
+      .step-2-content {
+        display: flex;
+        flex-direction: column;
+
+        #myCalendar {
+          max-width: 450px;
+        }
+        .selectHours {
+          max-width: 450px;
+        }
+      }
+    }
+  }
+
+  .termsAndCondition {
+    .container {
+      padding: 0 30px;
+      ol {
+        .nested-list {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-sm {
+  header {
+    .container {
+      img {
+        width: 250px;
+      }
+    }
+  }
+
+  .hero {
+    background-position-x: 60%;
+    .hero-header {
+      margin-left: 30px;
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+
+  .booking {
+    .container {
+      padding: 0 3px;
+      ul {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 0px;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .step2 {
+    .container {
+      .step-2-content {
+        display: flex;
+        flex-direction: column;
+
+        .selectHours {
+          max-width: 300px;
+        }
+
+        #myCalendar {
+          width: 300px;
+        }
+
+        .hours {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          text-align: center;
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+}

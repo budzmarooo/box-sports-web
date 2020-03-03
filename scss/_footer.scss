@@ -1,0 +1,39 @@
+footer {
+  width: 100%;
+  .container {
+    max-width: 1440px;
+    background-color: #13234d;
+    margin: 0 auto;
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f4f5f527;
+
+      img {
+        display: inline-block;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.07);
+        }
+      }
+    }
+    .sub-footer {
+      p {
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 0.6000000238418579;
+        text-align: center;
+        padding: 10px;
+        transition: ease-in-out 0.5s all;
+      }
+      .terms:hover {
+        color: red;
+        transition: ease-in-out 0.5s all;
+      }
+    }
+  }
+}

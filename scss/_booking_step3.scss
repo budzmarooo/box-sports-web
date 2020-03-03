@@ -1,0 +1,56 @@
+.step3 {
+  .container {
+    max-width: 280px;
+  }
+}
+
+.customer-info {
+  h2 {
+    margin-bottom: 30px;
+  }
+  label,
+  input {
+    display: block;
+  }
+
+  label {
+    color: #12234c;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: left;
+    margin-bottom: 3px;
+    position: relative;
+  }
+  .errorMsg {
+    position: absolute;
+    color: red;
+    top: 0;
+    right: 0;
+  }
+
+  input {
+    margin-bottom: 20px;
+    width: 97%;
+    border: 1px solid #13234d;
+    height: 48px;
+    padding-left: 12px;
+    &::placeholder {
+      font-family: "Barlow-Reg";
+      line-height: 18px;
+    }
+  }
+
+  textarea {
+    display: block;
+    width: 97%;
+    border: 1px solid #13234d;
+    height: 79px;
+    padding-left: 12px;
+    margin-bottom: 45px;
+    padding-top: 6px;
+    &::placeholder {
+      font-family: "Barlow-Reg";
+      line-height: 18px;
+    }
+  }
+}

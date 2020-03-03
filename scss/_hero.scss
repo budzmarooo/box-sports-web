@@ -1,0 +1,56 @@
+.hero {
+  background: url("../assets/img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .hero-header {
+    margin-left: 18.33%;
+    margin-top: 100px;
+    h1 {
+      color: #ffffff;
+      font-family: "Barlow-Bold";
+      font-size: 80px;
+      opacity: 0.8499999642372131;
+      text-align: left;
+      line-height: 1;
+    }
+    .book-now {
+      margin-top: 50px;
+      position: relative;
+
+      a {
+        display: inline-block;
+        position: relative;
+        padding: 14px 54px 16px 20px;
+        background-color: #ff3f3f;
+        color: #ffffff;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.4s ease-in-out;
+          & ~ img {
+            transform: scale(1.1);
+          }
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          border: 1px solid #ff3f3f;
+          width: 146px;
+          height: 44px;
+          top: 6px;
+          left: -4px;
+        }
+      }
+      img {
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        top: 25%;
+        left: 100px;
+      }
+    }
+  }
+}

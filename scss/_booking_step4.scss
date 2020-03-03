@@ -1,0 +1,79 @@
+.step4 {
+  .container {
+    width: 300px;
+
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+
+  .note {
+    color: #ff3f3f;
+    font-family: "Barlow-Reg";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    margin: 30px auto 20px;
+  }
+
+  .countdown-container {
+    text-align: center;
+    span {
+      color: #ff3f3f;
+      font-family: "Barlow-Bold2";
+      font-size: 20px;
+      line-height: 24px;
+      border: 1px solid #13234d;
+      display: inline-block;
+      padding: 10px 15px;
+    }
+  }
+}
+
+.booking-card {
+  min-width: 300px;
+  position: relative;
+  z-index: 1;
+
+  .rectangle {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    top: 3px;
+    left: -4px;
+    border: 1px solid #13234d;
+    z-index: -1;
+  }
+  &__title {
+    background-color: #13234d;
+    padding: 9px;
+    color: #ffffff75;
+    font-family: "Barlow-SemiBold";
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  table {
+    width: 100%;
+    background-color: #f4f5f5;
+    border: 1px solid #13234d;
+    padding: 9px;
+  }
+
+  td {
+    padding: 3px;
+    color: #12234c;
+    font-family: "Barlow-SemiBold";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  .tableTitle {
+    color: #12234c;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: 0.5;
+  }
+}

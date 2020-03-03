@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./lib/vanillaCalendar/vanilla-calendar.css" />
+    <title>SPORTS CENTER | RESERVER OUR SPORTS COURT WITH EASE</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="./assets/img/logo BOX horizontal.svg" alt="box-sports-logo"
+        /></a>
+        <div class="menu-btn"></div>
+        <nav>
+          <ul>
+            <li><a href="#" class="blue">ABOUT US</a></li>
+            <li><a href="#" class="blue">CONTACT US</a></li>
+            <li class="active"><a href="#" class="blue">BOOK COURT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-content__x">
+          <img src="./assets/img/cancel.png" alt="cancel" />
+        </div>
+
+        <p class="modal-content__text"></p>
+        <a class="modal-content__close">Close</a>
+      </div>
+    </div>
+
+    <main class="booking">
+      <div class="container">
+        <form action="" id="stepsForm" class="stepsForm" name="form">
+          <div class="steps-header">
+            <ul>
+              <li class="stepTitle underline blur">
+                <img
+                  src="./assets/img/icons/basketBallIcon.png"
+                  alt="court-icon"
+                />
+                <span>Court</span>
+              </li>
+              <li class="stepTitle">
+                <img
+                  src="./assets/img/icons/calendarIcon.png"
+                  alt="calendar-icon"
+                />
+                <span>Schedule</span>
+              </li>
+              <li class="stepTitle">
+                <img
+                  src="./assets/img/icons/personIcon.png"
+                  alt="person-icon"
+                />
+                <span>Customer</span>
+              </li>
+              <li class="stepTitle resetline">
+                <img src="./assets/img/icons/flagIcon.png" alt="flag-icon" />
+                <span>Book</span>
+              </li>
+            </ul>
+          </div>
+          <div class="steps-container">
+            <div class="steps step1">
+              <h2 class="courts__header">WHICH COURT DO YOU PREFER</h2>
+              <div class="courts"></div>
+            </div>
+            <!-- step2 -->
+            <div class="steps step2 hidden">
+              <h2 class="courts__header">WHEN WILL YOU PLAY?</h2>
+              <div class="container">
+                <div class="step-2-content">
+                  <div id="myCalendar" class="vanilla-calendar"></div>
+                  <div class="selectHours">
+                    <h2>SELECT TIME:</h2>
+                    <div class="hours">
+                      <input type="checkbox" name="radio" id="firstHour" />
+                      <label for="firstHour">
+                        <span>06:00 - 07:00</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step2 -->
+            <!-- step3 -->
+            <div class="steps step3 hidden">
+              <div class="container">
+                <div class="customer-info">
+                  <h2 class="courts__header">WHO DESERVE THIS COURT?</h2>
+                  <label for="phoneNumber" name="formInput">
+                    <span class="errorMsg"></span>
+                    PHONE NUMBER</label
+                  >
+                  <input
+                    name="phoneNumber"
+                    type="number"
+                    id="phoneNumber"
+                    placeholder="Eg. 0812 3456 7890"
+                  />
+                  <label for="name" name="formInput"
+                    ><span class="errorMsg"></span>NAME</label
+                  >
+                  <input
+                    name="name"
+                    type="text"
+                    id="name"
+                    placeholder="What we call you"
+                  />
+                  <label for="email" name="formInput"
+                    ><span class="errorMsg"></span>EMAIL</label
+                  >
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    placeholder="Contact email"
+                  />
+                  <label for="note">NOTE(OPTIONAL)</label>
+                  <textarea
+                    name="note"
+                    id="note"
+                    cols="30"
+                    rows="10"
+                    placeholder="Eg. make sure the court is clean"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- step3 -->
+            <!-- step4 -->
+            <div class="steps step4 hidden">
+              <div class="container">
+                <div class="go-pay">
+                  <h2 class="courts__header">FINISH YOUR BOOKING</h2>
+                  <div class="booking-card">
+                    <div class="booking-card__title">
+                      <div class="rectangle"></div>
+                      <p>YOUR BOOKING DETAIL:</p>
+                    </div>
+                    <div class="booking-card__body">
+                      <table>
+                        <tr>
+                          <td class="tableTitle">COURT</td>
+                          <td class="tableTitle">:</td>
+                          <td id="courtName"></td>
+                        </tr>
+                        <tr>
+                          <td class="tableTitle">SCHEDULE</td>
+                          <td class="tableTitle">:</td>
+                          <td id="courtDate"></td>
+                        </tr>
+                        <tr>
+                          <td class="tableTitle">DURATION</td>
+                          <td class="tableTitle">:</td>
+                          <td id="courtDuration">20.00 - 22.00(2 hours)</td>
+                        </tr>
+                        <tr>
+                          <td class="tableTitle">BOOKING FEE</td>
+                          <td class="tableTitle">:</td>
+                          <td id="courtPrice">Rp 111,000</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <p class="note">
+                    Your court was successfully book, you have 2 hours to
+                    complete payment
+                  </p>
+                  <div class="countdown-container">
+                    <span class="countdown" id="countDown">01 : 57 : 28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- step4 -->
+          </div>
+
+          <div class="steps-button">
+            <a id="prevBtn" class="disable"
+              ><img
+                src="./assets/img/icons/backIcon.png"
+                alt="prevIcon"
+                class="prevBtn"
+            /></a>
+            <a id="nextBtn" class="btn">
+              SCHEDULE <img src="./assets/img/rightArrow.png" alt="nextIcon" />
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-icons">
+          <img src="./assets/img/insta.png" alt="insta-icon" />
+          <img src="./assets/img/twitter.png" alt="fb-icon" />
+          <img src="./assets/img/facebook.png" alt="fb-icon" />
+        </div>
+        <div class="sub-footer">
+          <p>© 2020 Box Sports Center</p>
+          <a href="termsAndCondition.html"
+            ><p class="terms">Syarat & Ketentuan</p></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./lib/vanillaCalendar/vanilla-calendar-min.js"></script>
+    <script src="./lib/dateFormat/date.format.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
+</html>

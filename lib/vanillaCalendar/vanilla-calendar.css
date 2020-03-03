@@ -1,0 +1,94 @@
+:root {
+  --vanilla-calendar-bg-color: #fff;
+  --vanilla-calendar-border-radius: 5px;
+  --vanilla-calendar-border-color: #e7e9ed;
+  --vanilla-calendar-today-bg-color: #e7e9ed;
+  --vanilla-calendar-today-color: #333;
+  --vanilla-calendar-selected-bg-color: #538fcd;
+  --vanilla-calendar-selected-color: #fff;
+  --vanilla-calendar-selected-radius: 5px;
+}
+
+.vanilla-calendar *,
+.vanilla-calendar *:before,
+.vanilla-calendar *:after {
+  box-sizing: border-box;
+}
+
+.vanilla-calendar {
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow: hidden;
+  width: 500px;
+}
+
+.vanilla-calendar .vanilla-calendar-header {
+  text-transform: uppercase;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  min-width: 27px;
+  outline: none;
+  overflow: visible;
+  padding: 0;
+  text-align: center;
+}
+
+.vanilla-calendar .vanilla-calendar-week {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vanilla-calendar .vanilla-calendar-week span {
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  font-size: 1em;
+  font-weight: bold;
+  max-width: 14.28%;
+  padding: 15px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.vanilla-calendar .vanilla-calendar-body {
+  background-color: rgba(var(--vanilla-calendar-selected-bg-color), 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.vanilla-calendar .vanilla-calendar-date {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 14.28%;
+  max-width: 14.28%;
+  padding: 10px 0;
+}
+
+.vanilla-calendar .vanilla-calendar-date--active {
+  cursor: pointer;
+}
+
+.vanilla-calendar .vanilla-calendar-date--today {
+  background-color: #ff3f3f;
+}
+
+.vanilla-calendar .vanilla-calendar-date--selected {
+  background-color: #05236c;
+}
+
+.vanilla-calendar .vanilla-calendar-date--disabled {
+  border-radius: 0;
+  cursor: not-allowed;
+  opacity: 0.2;
+}

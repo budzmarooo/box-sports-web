@@ -1,0 +1,35 @@
+.termsAndCondition {
+  width: 100%;
+  background-color: #e7e9ed;
+  .container {
+    max-width: 800px;
+    display: block;
+    padding: 50px 0;
+
+    h1 {
+      font-family: "Barlow-Bold2";
+      text-align: center;
+      padding: 15px;
+    }
+    ol {
+      padding: 15px;
+      li {
+        list-style-type: decimal;
+        display: list-item;
+        padding-top: 10px;
+      }
+
+      .list-title {
+        font-family: "Barlow-Bold2";
+        font-size: 21px;
+      }
+      p {
+        padding-left: 20px;
+        padding-top: 10px;
+      }
+      .nested-list {
+        padding-left: 150px;
+      }
+    }
+  }
+}

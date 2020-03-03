@@ -1,0 +1,87 @@
+main {
+  width: 100%;
+  .container {
+    max-width: 1440px;
+    display: flex;
+    margin: 0 auto;
+
+    .contact-lists {
+      width: 50%;
+      margin-top: 31px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h4 {
+        margin-bottom: 12px;
+        color: #12234c;
+        font-family: "Barlow-SemiBold";
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 0.5;
+        text-align: left;
+      }
+
+      .contact-list {
+        padding: 6px;
+        margin-left: 23px;
+
+        img {
+          display: inline-block;
+          padding: 0 6px;
+        }
+
+        a {
+          color: #12234c;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 18px;
+          text-align: left;
+        }
+
+        &__number {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background: url(../assets/img/phoneIcon.png);
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+            left: -30px;
+          }
+        }
+        &__email {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background: url(../assets/img/msgIcon.png);
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+            left: -30px;
+          }
+        }
+        &__area {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            background: url(../assets/img/locIcon.png);
+            background-size: cover;
+            height: 20px;
+            width: 20px;
+            left: -30px;
+          }
+        }
+      }
+    }
+    .location-map {
+      width: 50%;
+      background: url("../assets/img/maps.png");
+      background-size: cover;
+      height: 200px;
+    }
+  }
+}
